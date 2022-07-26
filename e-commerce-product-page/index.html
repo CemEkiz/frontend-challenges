@@ -16,14 +16,33 @@
 	</head>
 	<body>
 		<header class="header">
-			<svg width="16" height="15" xmlns="http://www.w3.org/2000/svg">
-				<path
-					d="M16 12v3H0v-3h16Zm0-6v3H0V6h16Zm0-6v3H0V0h16Z"
-					fill="#69707D"
-					fill-rule="evenodd"
-				/>
-			</svg>
-			<h1>Test</h1>
+			<nav class="nav">
+				<ul class="nav__list">
+					<li><a href="#" class="nav__list__link">Collections</a></li>
+					<li><a href="#" class="nav__list__link">Men</a></li>
+					<li><a href="#" class="nav__list__link">Women</a></li>
+					<li><a href="#" class="nav__list__link">About</a></li>
+					<li><a href="#" class="nav__list__link">Contact</a></li>
+				</ul>
+				<button class="nav__btn-close">
+					<img src="images/icon-close.svg" alt="" />
+				</button>
+			</nav>
+			<div class="header__left">
+				<button class="header__btn-open">
+					<img src="images/icon-menu.svg" alt="" />
+				</button>
+				<div class="header__logo">
+					<img src="images/logo.svg" alt="" />
+				</div>
+			</div>
+			<div class="header__right">
+				<div class="header__cart">
+					<img src="images/icon-cart.svg" alt="" />
+				</div>
+				<img src="images/image-avatar.png" alt="" class="header__avatar" />
+			</div>
 		</header>
+		<div class="overlay hidden"></div>
 	</body>
 </html>
