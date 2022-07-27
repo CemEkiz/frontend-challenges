@@ -1,0 +1,31 @@
+.header {
+	height: 6rem;
+	background-color: var(--color-white);
+	display: flex;
+	justify-content: space-between;
+	padding: 2rem;
+}
+
+.header__left,
+.header__right {
+	display: flex;
+	align-items: center;
+	gap: 1.6rem;
+}
+
+.header__avatar {
+	width: 3.2rem;
+}
+
+.header__logo {
+	position: relative;
+	bottom: 0.2rem;
+}
+
+.header__cart img {
+	width: 2.4rem;
+}
+
+.header__btn-open {
+	cursor: pointer;
+}

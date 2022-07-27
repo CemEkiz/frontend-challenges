@@ -1,0 +1,46 @@
+@use '../abstracts/' as *;
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+	overflow: hidden;
+}
+
+body {
+	font-family: 'Kumbh Sans', sans-serif;
+	font-size: var(--regular-font-size);
+	color: var(--body-color);
+	background-color: var(--accent-color);
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+
+button {
+	background-color: transparent;
+	border: none;
+}
+
+img {
+	width: 100%;
+}
+
+// .hidden {
+// 	visibility: hidden;
+// 	/* opacity: 0; */
+// 	/* display: none; */
+// 	pointer-events: none;
+// 	transform: translateX(-100%);
+// }
