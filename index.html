@@ -10,12 +10,19 @@
 			sizes="32x32"
 			href="./images/favicon-32x32.png"
 		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+		/>
+
 		<link rel="stylesheet" href="css/style.css" />
-		<link rel="stylesheet" href="css/general.css" />
+		<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+		<!-- <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script> -->
 		<script defer src="js/script.js"></script>
 		<title>E-commerce product page</title>
 	</head>
 	<body>
+		<!-- HEADER -->
 		<header class="header">
 			<nav class="nav hidden">
 				<ul class="nav__list">
@@ -45,5 +52,25 @@
 			</div>
 		</header>
 		<div class="overlay hidden"></div>
+
+		<div class="swiper mySwiper">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<img src="images/image-product-1.jpg" alt="Image 1 of the product" />
+				</div>
+				<div class="swiper-slide">
+					<img src="images/image-product-2.jpg" alt="Image 1 of the product" />
+				</div>
+				<div class="swiper-slide">
+					<img src="images/image-product-3.jpg" alt="Image 1 of the product" />
+				</div>
+			</div>
+			<div class="swiper-button-next">
+				<img src="images/icon-next.svg" alt="" />
+			</div>
+			<div class="swiper-button-prev">
+				<img src="images/icon-prev.svg" alt="" />
+			</div>
+		</div>
 	</body>
 </html>
