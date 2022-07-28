@@ -23,7 +23,7 @@
 	</head>
 	<body>
 		<!-- HEADER -->
-		<header class="header">
+		<header class="header container">
 			<nav class="nav hidden">
 				<ul class="nav__list">
 					<li><a href="#" class="nav__list__link">Collections</a></li>
@@ -45,24 +45,30 @@
 				</div>
 			</div>
 			<div class="header__right">
-				<div class="header__cart">
+				<div class="header__cart-icon">
 					<img src="images/icon-cart.svg" alt="" />
+					<div class="header__cart-icon--notif">1</div>
 				</div>
 				<img src="images/image-avatar.png" alt="" class="header__avatar" />
 			</div>
 		</header>
+
 		<div class="overlay hidden"></div>
 
+		<!-- SLIDER -->
 		<div class="swiper mySwiper">
 			<div class="swiper-wrapper">
 				<div class="swiper-slide">
 					<img src="images/image-product-1.jpg" alt="Image 1 of the product" />
 				</div>
 				<div class="swiper-slide">
-					<img src="images/image-product-2.jpg" alt="Image 1 of the product" />
+					<img src="images/image-product-2.jpg" alt="Image 2 of the product" />
 				</div>
 				<div class="swiper-slide">
-					<img src="images/image-product-3.jpg" alt="Image 1 of the product" />
+					<img src="images/image-product-3.jpg" alt="Image 3 of the product" />
+				</div>
+				<div class="swiper-slide">
+					<img src="images/image-product-4.jpg" alt="Image 4 of the product" />
 				</div>
 			</div>
 			<div class="swiper-button-next">
@@ -71,6 +77,62 @@
 			<div class="swiper-button-prev">
 				<img src="images/icon-prev.svg" alt="" />
 			</div>
+			<!-- CART Empty -->
+			<div class="cart">
+				<h3 class="cart__heading">Cart</h3>
+				<div class="cart__description">
+					<div class="cart__description--empty hidden-cart">
+						<p>Your cart is empty</p>
+					</div>
+					<div class="cart__description--product">
+						<img
+							src="images/image-product-1-thumbnail.jpg"
+							alt=""
+							class="cart__description--product-img"
+						/>
+						<div class="cart__description--product-info">
+							<p>Autumn Limited Edition...</p>
+							<p class="cart__description--product-price">
+								<span>$125.00</span> x <span>3</span>
+								<span class="cart__final-price">$375.00</span>
+							</p>
+						</div>
+						<img
+							src="images/icon-delete.svg"
+							class="cart__description--product-delete"
+							alt=""
+						/>
+						<button class="btn cart__description--product-btn">Checkout</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- PRODUCT DESCRIPTION -->
+		<div class="product-info container">
+			<p class="product-info__tag">Sneaker Company</p>
+			<h1 class="product-info__heading">Fall Limited Edition Sneakers</h1>
+			<p class="product-info__description">
+				These low profile sneakers are your perfect casual wear companion.
+				Featuring a durable rubber outer sole, they'll withstand everything the
+				weather can offer.
+			</p>
+			<div class="product-info__price">
+				<div class="product-info__price__after">$125</div>
+				<span class="product-info__price__discount">50%</span>
+				<div class="product-info__price__before">$250</div>
+			</div>
+			<div class="item btn">
+				<button class="item__btn-minus">
+					<img src="images/icon-minus.svg" alt="" />
+				</button>
+				<div class="item__number">0</div>
+				<button class="item__btn-plus">
+					<img src="images/icon-plus.svg" alt="" />
+				</button>
+			</div>
+			<!-- <div class="btn">Add to cart</div> -->
+			<button class="btn btn-light">Add to cart</button>
 		</div>
 	</body>
 </html>

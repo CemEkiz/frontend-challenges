@@ -36,3 +36,25 @@ var swiper = new Swiper('.mySwiper', {
 		onlyInViewport: false,
 	},
 });
+
+///////////// Calculate Shopping Cart ///////////////
+const btnMinus = document.querySelector('.item__btn-minus');
+const btnPlus = document.querySelector('.item__btn-plus');
+const numberItem = document.querySelector('.item__number');
+
+numberCalc = 0;
+
+// Increase number of item by 1
+btnPlus.addEventListener('click', function () {
+	numberCalc++;
+	numberItem.textContent = numberCalc;
+});
+
+// Decrease number of item by 1
+btnMinus.addEventListener('click', function () {
+	// Guard Clause
+	if (numberCalc === 0) return;
+
+	numberCalc--;
+	numberItem.textContent = numberCalc;
+});

@@ -6,6 +6,10 @@
 	transform: translateX(-100%);
 }
 
+.hidden-cart {
+	display: none;
+}
+
 .overlay {
 	position: absolute;
 	top: 0;
@@ -15,4 +19,26 @@
 	background-color: var(--color-black-overlay);
 	height: 100vh;
 	width: 100vw;
+}
+
+.container {
+	// max-width: 37.5rem;
+	max-width: 50rem;
+	margin: 0 auto;
+	padding: 0 2rem;
+}
+
+.btn {
+	background-color: var(--accent-color);
+	padding: 1.2rem 2.4rem;
+	border-radius: 1rem;
+	color: var(--color-white);
+	font-weight: var(--weight-bold);
+	font-size: var(--regular-font-size);
+	text-align: center;
+	cursor: pointer;
+
+	&-light {
+		box-shadow: var(--accent-color) 0px 15px 50px -12px;
+	}
 }
