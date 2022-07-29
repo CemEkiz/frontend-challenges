@@ -9,10 +9,10 @@
 	width: 32rem;
 	background-color: var(--color-white);
 
-	position: absolute; // relative to .swiper
-	top: 1rem;
-	left: 55%;
-	transform: translateX(-50%);
+	position: absolute; // relative to .header
+	top: 7rem;
+	right: 1rem;
+	// transform: translateX(-50%);
 	z-index: 999;
 
 	border-radius: 0.5rem;

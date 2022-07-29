@@ -167,6 +167,7 @@
 }
 
 .header {
+  position: relative;
   height: 6rem;
   display: flex;
   justify-content: space-between;
@@ -248,9 +249,8 @@
   width: 32rem;
   background-color: var(--color-white);
   position: absolute;
-  top: 1rem;
-  left: 55%;
-  transform: translateX(-50%);
+  top: 7rem;
+  right: 1rem;
   z-index: 999;
   border-radius: 0.5rem;
 }

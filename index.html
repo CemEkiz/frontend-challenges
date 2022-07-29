@@ -22,20 +22,21 @@
 		<title>E-commerce product page</title>
 	</head>
 	<body>
+		<!-- NAVBAR -->
+		<nav class="nav hidden">
+			<ul class="nav__list">
+				<li><a href="#" class="nav__list__link">Collections</a></li>
+				<li><a href="#" class="nav__list__link">Men</a></li>
+				<li><a href="#" class="nav__list__link">Women</a></li>
+				<li><a href="#" class="nav__list__link">About</a></li>
+				<li><a href="#" class="nav__list__link">Contact</a></li>
+			</ul>
+			<button class="nav__btn-close">
+				<img src="images/icon-close.svg" alt="" />
+			</button>
+		</nav>
 		<!-- HEADER -->
 		<header class="header container">
-			<nav class="nav hidden">
-				<ul class="nav__list">
-					<li><a href="#" class="nav__list__link">Collections</a></li>
-					<li><a href="#" class="nav__list__link">Men</a></li>
-					<li><a href="#" class="nav__list__link">Women</a></li>
-					<li><a href="#" class="nav__list__link">About</a></li>
-					<li><a href="#" class="nav__list__link">Contact</a></li>
-				</ul>
-				<button class="nav__btn-close">
-					<img src="images/icon-close.svg" alt="" />
-				</button>
-			</nav>
 			<div class="header__left">
 				<button class="header__btn-open">
 					<img src="images/icon-menu.svg" alt="" />
@@ -51,33 +52,6 @@
 				</div>
 				<img src="images/image-avatar.png" alt="" class="header__avatar" />
 			</div>
-		</header>
-
-		<div class="overlay hidden"></div>
-
-		<!-- SLIDER -->
-		<div class="swiper mySwiper">
-			<div class="swiper-wrapper">
-				<div class="swiper-slide">
-					<img src="images/image-product-1.jpg" alt="Image 1 of the product" />
-				</div>
-				<div class="swiper-slide">
-					<img src="images/image-product-2.jpg" alt="Image 2 of the product" />
-				</div>
-				<div class="swiper-slide">
-					<img src="images/image-product-3.jpg" alt="Image 3 of the product" />
-				</div>
-				<div class="swiper-slide">
-					<img src="images/image-product-4.jpg" alt="Image 4 of the product" />
-				</div>
-			</div>
-			<div class="swiper-button-next">
-				<img src="images/icon-next.svg" alt="" />
-			</div>
-			<div class="swiper-button-prev">
-				<img src="images/icon-prev.svg" alt="" />
-			</div>
-			<!-- CART Empty -->
 			<div class="cart">
 				<h3 class="cart__heading">Cart</h3>
 				<div class="cart__description">
@@ -106,6 +80,33 @@
 					</div>
 				</div>
 			</div>
+		</header>
+
+		<div class="overlay hidden"></div>
+
+		<!-- SLIDER -->
+		<div class="swiper mySwiper">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<img src="images/image-product-1.jpg" alt="Image 1 of the product" />
+				</div>
+				<div class="swiper-slide">
+					<img src="images/image-product-2.jpg" alt="Image 2 of the product" />
+				</div>
+				<div class="swiper-slide">
+					<img src="images/image-product-3.jpg" alt="Image 3 of the product" />
+				</div>
+				<div class="swiper-slide">
+					<img src="images/image-product-4.jpg" alt="Image 4 of the product" />
+				</div>
+			</div>
+			<div class="swiper-button-next">
+				<img src="images/icon-next.svg" alt="" />
+			</div>
+			<div class="swiper-button-prev">
+				<img src="images/icon-prev.svg" alt="" />
+			</div>
+			<!-- CART Empty -->
 		</div>
 
 		<!-- PRODUCT DESCRIPTION -->
