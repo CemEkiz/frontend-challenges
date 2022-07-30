@@ -95,7 +95,7 @@
 
 	&__tag {
 		text-transform: uppercase;
-		margin-top: var(--mb-s);
+		margin-top: var(--mb-m);
 		margin-bottom: var(--mb-xs);
 		font-size: 1.2rem;
 		font-weight: var(--weight-bold);
@@ -112,13 +112,13 @@
 
 	&__description {
 		line-height: 1.5;
-		margin-bottom: var(--mb-s);
+		margin-bottom: var(--mb-m);
 	}
 
 	&__price {
 		display: flex;
 		align-items: center;
-		margin-bottom: var(--mb-s);
+		margin-bottom: var(--mb-m);
 
 		&__after {
 			font-size: var(--h1-font-size);
@@ -150,7 +150,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	margin-bottom: var(--mb-xs);
+	margin-bottom: var(--mb-s);
 	padding: 0 10rem;
 
 	&__btn-plus {
@@ -169,4 +169,5 @@
 
 .item.btn {
 	background-color: var(--color-gray-lightest);
+	cursor: auto;
 }
