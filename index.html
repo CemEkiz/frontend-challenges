@@ -48,36 +48,34 @@
 			<div class="header__right">
 				<div class="header__cart-icon">
 					<img src="images/icon-cart.svg" alt="" />
-					<div class="header__cart-icon--notif">1</div>
+					<div class="header__cart-icon--notif hidden">0</div>
 				</div>
 				<img src="images/image-avatar.png" alt="" class="header__avatar" />
 			</div>
-			<div class="cart">
+			<div class="cart hidden">
 				<h3 class="cart__heading">Cart</h3>
-				<div class="cart__description">
-					<div class="cart__description--empty hidden-cart">
-						<p>Your cart is empty</p>
-					</div>
-					<div class="cart__description--product">
-						<img
-							src="images/image-product-1-thumbnail.jpg"
-							alt=""
-							class="cart__description--product-img"
-						/>
-						<div class="cart__description--product-info">
-							<p>Autumn Limited Edition...</p>
-							<p class="cart__description--product-price">
-								<span>$125.00</span> x <span>3</span>
-								<span class="cart__final-price">$375.00</span>
-							</p>
+				<div class="cart__empty">
+					<p>Your cart is empty</p>
+				</div>
+				<div class="cart__product hidden-cart">
+					<img
+						src="images/image-product-1-thumbnail.jpg"
+						alt=""
+						class="cart__product__img"
+					/>
+					<div class="cart__product__info">
+						<p>Autumn Limited Edition...</p>
+						<div class="cart__price">
+							<!-- <span>$125.00</span> x <span>3</span>
+							<span class="cart__product__info-final-price">$375.00</span> -->
 						</div>
-						<img
-							src="images/icon-delete.svg"
-							class="cart__description--product-delete"
-							alt=""
-						/>
-						<button class="btn cart__description--product-btn">Checkout</button>
 					</div>
+					<img
+						src="images/icon-delete.svg"
+						class="cart__product__delete"
+						alt=""
+					/>
+					<button class="btn cart__product__btn">Checkout</button>
 				</div>
 			</div>
 		</header>
@@ -119,9 +117,9 @@
 				weather can offer.
 			</p>
 			<div class="product-info__price">
-				<div class="product-info__price__after">$125</div>
+				<!-- <div class="product-info__price__after">$125</div>
 				<span class="product-info__price__discount">50%</span>
-				<div class="product-info__price__before">$250</div>
+				<div class="product-info__price__before">$250</div> -->
 			</div>
 			<div class="item btn">
 				<button class="item__btn-minus">
@@ -133,7 +131,7 @@
 				</button>
 			</div>
 			<!-- <div class="btn">Add to cart</div> -->
-			<button class="btn btn-light">Add to cart</button>
+			<button class="btn btn-light btn-add">Add to cart</button>
 		</div>
 	</body>
 </html>
