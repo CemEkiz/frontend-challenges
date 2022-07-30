@@ -1,8 +1,19 @@
+@use '../abstracts/' as *;
+
 .header {
 	position: relative;
 	height: 6rem;
 	display: flex;
 	justify-content: space-between;
+
+	max-width: 50rem;
+	margin: 0 auto;
+	padding: 0 2rem;
+
+	@include respond(tab-port) {
+		max-width: 70rem;
+		margin: 1.6rem auto;
+	}
 
 	&__left,
 	&__right {

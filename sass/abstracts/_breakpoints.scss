@@ -1,0 +1,29 @@
+/////////////////// BREAKPOINTS ///////////////////
+
+// 0 - 768px:             Mobile                  (max-width: 600px)    => 37.5em
+// 768px - 1024px:        Tablet Portrait         (max-width: 900px)    => 56.25em
+// 1024px - 1440px:       Tablet Landscape        (max-width: 1200px)   => 75em
+// 1440px +:              Big Desktop             (min-width: 1800px)   => 112.5e
+
+@mixin respond($breakpoint) {
+	/// 768px ///       (768 / 16 = 48em)
+	@if $breakpoint == tab-port {
+		@media only screen and (min-width: 48em) {
+			@content;
+		}
+	}
+
+	/// 1024px ///       (1024 / 16 = 64em)
+	@if $breakpoint == tab-land {
+		@media only screen and (min-width: 64em) {
+			@content;
+		}
+	}
+
+	/// 1440px ///      (1440 / 16 = 90em)
+	@if $breakpoint == laptop {
+		@media only screen and (min-width: 90em) {
+			@content;
+		}
+	}
+}

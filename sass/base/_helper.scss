@@ -1,3 +1,5 @@
+@use '../abstracts/' as *;
+
 .hidden {
 	visibility: hidden;
 	opacity: 0;
@@ -22,10 +24,13 @@
 }
 
 .container {
-	// max-width: 37.5rem;
 	max-width: 50rem;
 	margin: 0 auto;
 	padding: 0 2rem;
+
+	@include respond(tab-port) {
+		max-width: 70rem;
+	}
 }
 
 .btn {
@@ -35,7 +40,7 @@
 	color: var(--color-white);
 	font-weight: var(--weight-bold);
 	font-size: var(--regular-font-size);
-	text-align: center;
+	// text-align: center;
 	font-family: 'Kumbh Sans', sans-serif;
 	cursor: pointer;
 
