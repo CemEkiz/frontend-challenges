@@ -78,9 +78,9 @@ shopIcon.addEventListener('click', function () {
 ////////////////// Price //////////////////
 
 const definePrice = (priceBefore, discount) => {
-	priceContainer.innerHTML = '';
-
 	const priceAfter = priceBefore * (discount / 100);
+
+	priceContainer.innerHTML = '';
 
 	// Display UI ---> Description
 	const html = `
@@ -91,18 +91,24 @@ const definePrice = (priceBefore, discount) => {
 
 	priceContainer.insertAdjacentHTML('afterbegin', html);
 
+	// Update Price (UI) ---> Cart
+	let itemCalc = Number(itemNb.textContent);
+	itemCalc = 0;
+
 	// Update Notif
 	const updateNotif = () => {
 		if (itemCalc > 0) {
 			displayEl(notif);
+			displayEl(notif);
+			displayEl(cartProduct);
+			hideEl(cartEmpty);
 		} else {
 			hideEl(notif);
+			hideEl(notif);
+			displayEl(cartEmpty);
+			hideEl(cartProduct);
 		}
 	};
-
-	// Update Price (UI) ---> Cart
-	let itemCalc = Number(itemNb.textContent);
-	itemCalc = 0;
 
 	const updatePrice = () => {
 		cartPrice.innerHTML = '';
@@ -119,26 +125,13 @@ const definePrice = (priceBefore, discount) => {
 
 		itemNb.textContent = itemCalc;
 		notif.textContent = itemCalc;
-
-		if (itemNb.textContent > 0) {
-			displayEl(notif);
-			displayEl(cartProduct);
-			hideEl(cartEmpty);
-		} else {
-			hideEl(notif);
-			displayEl(cartEmpty);
-			hideEl(cartProduct);
-		}
 	};
 
 	// Increase number of item by 1 and update UI
 	btnPlus.addEventListener('click', function () {
 		itemCalc++;
 		updatePrice();
-
 		updateNotif();
-
-		console.log(itemCalc);
 	});
 
 	// Decrease number of item by 1 and update UI
@@ -147,10 +140,7 @@ const definePrice = (priceBefore, discount) => {
 		if (itemCalc === 0) return;
 		itemCalc--;
 		updatePrice();
-
 		updateNotif();
-
-		console.log(itemCalc);
 	});
 };
 
