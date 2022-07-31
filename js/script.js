@@ -20,6 +20,8 @@ const cartPrice = document.querySelector('.cart__price');
 const priceContainer = document.querySelector('.product-info__price');
 const deleteProduct = document.querySelector('.cart__product__delete');
 
+console.log(navLinks);
+
 ////////////////// Reusable Functions //////////////////
 
 // Hide Element
@@ -36,11 +38,17 @@ const displayEl = function (element) {
 
 const openMenu = () => {
 	navMenuMobile.classList.remove('hidden');
+	navLinks.forEach((link) => {
+		link.classList.remove('hidden');
+	});
 	overlay.classList.remove('hidden');
 };
 
 const closeMenu = () => {
 	navMenuMobile.classList.add('hidden');
+	navLinks.forEach((link) => {
+		link.classList.add('hidden');
+	});
 	overlay.classList.add('hidden');
 };
 
