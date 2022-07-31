@@ -17,6 +17,7 @@ body {
 	font-size: var(--regular-font-size);
 	color: var(--body-color);
 	background-color: var(--color-white);
+	overflow-x: hidden;
 }
 
 a {

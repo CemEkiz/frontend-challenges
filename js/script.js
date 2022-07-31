@@ -20,8 +20,6 @@ const cartPrice = document.querySelector('.cart__price');
 const priceContainer = document.querySelector('.product-info__price');
 const deleteProduct = document.querySelector('.cart__product__delete');
 
-console.log(navLinks);
-
 ////////////////// Reusable Functions //////////////////
 
 // Hide Element
@@ -59,18 +57,50 @@ navLinks.forEach((link) => link.addEventListener('click', closeMenu));
 
 ////////////////// Slider //////////////////
 
-var swiper = new Swiper('.mySwiper', {
-	slidesPerView: 1,
-	loop: true,
+// var swiper = new Swiper('.mySwiper', {
+// 	slidesPerView: 1,
+// 	loop: true,
 
+// 	navigation: {
+// 		nextEl: '.swiper-button-next',
+// 		prevEl: '.swiper-button-prev',
+// 	},
+
+// 	// pagination: {
+// 	// 	el: '.swiper-pagination',
+// 	// 	clickable: true,
+// 	// 	// renderBullet: function (index, className) {
+// 	// 	// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
+// 	// 	// },
+// 	// },
+
+// 	thumbs: {
+// 		swiper: thumbsSwiper,
+// 	},
+
+// 	keyboard: {
+// 		enabled: true,
+// 		onlyInViewport: false,
+// 	},
+// });
+
+var swiper = new Swiper('.mySwiper', {
+	loop: false,
+	spaceBetween: 10,
+	slidesPerView: 4,
+	freeMode: false,
+	watchSlidesProgress: false,
+});
+var swiper2 = new Swiper('.mySwiper2', {
+	loop: true,
+	spaceBetween: 0,
 	navigation: {
 		nextEl: '.swiper-button-next',
 		prevEl: '.swiper-button-prev',
 	},
-
-	keyboard: {
-		enabled: true,
-		onlyInViewport: false,
+	thumbs: {
+		swiper: swiper,
+		multipleActiveThumbs: false,
 	},
 });
 
