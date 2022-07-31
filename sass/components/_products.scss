@@ -117,6 +117,9 @@
 		align-items: start;
 	}
 
+	@include respond(laptop) {
+	}
+
 	&__tag {
 		text-transform: uppercase;
 		margin-top: var(--mb-m);
@@ -198,6 +201,7 @@
 
 	&__btn-minus {
 		cursor: pointer;
+		transform: translateY(-16%);
 	}
 
 	&__number {
@@ -216,6 +220,11 @@
 .item-wrapper {
 	display: grid;
 	margin-bottom: var(--mb-l);
+
+	@include respond(tab-port) {
+		grid-template-columns: 16rem 24rem;
+		column-gap: 2rem;
+	}
 }
 
 .choose-btn {
@@ -226,6 +235,6 @@
 	font-size: var(--regular-font-size);
 
 	@include respond(tab-port) {
-		width: 30rem;
+		margin: 0;
 	}
 }

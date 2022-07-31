@@ -197,6 +197,7 @@
 }
 .item__btn-minus {
   cursor: pointer;
+  transform: translateY(-16%);
 }
 .item__number {
   font-size: var(--h3-font-size);
@@ -206,6 +207,12 @@
 .item-wrapper {
   display: grid;
   margin-bottom: var(--mb-l);
+}
+@media only screen and (min-width: 48em) {
+  .item-wrapper {
+    grid-template-columns: 16rem 24rem;
+    column-gap: 2rem;
+  }
 }
 
 .choose-btn {
@@ -217,7 +224,7 @@
 }
 @media only screen and (min-width: 48em) {
   .choose-btn {
-    width: 30rem;
+    margin: 0;
   }
 }
 
