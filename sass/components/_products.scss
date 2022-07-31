@@ -10,8 +10,8 @@
 	margin-right: auto;
 
 	@include respond(tab-port) {
-		width: 70rem;
-		max-height: 60vh;
+		max-width: 70rem;
+		max-height: 70rem;
 	}
 
 	&-slide {
