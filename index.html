@@ -22,6 +22,64 @@
 		<title>E-commerce product page</title>
 	</head>
 	<body>
+		<div class="swiper-modal hidden">
+			<button class="btn-close-modal">
+				<img src="images/icon-close.svg" alt="" />
+			</button>
+			<div
+				style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+				class="swiper mySwiper3"
+			>
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img
+							src="images/image-product-1.jpg"
+							alt="Image 1 of the product"
+						/>
+					</div>
+					<div class="swiper-slide">
+						<img
+							src="images/image-product-2.jpg"
+							alt="Image 2 of the product"
+						/>
+					</div>
+					<div class="swiper-slide">
+						<img
+							src="images/image-product-3.jpg"
+							alt="Image 3 of the product"
+						/>
+					</div>
+					<div class="swiper-slide">
+						<img
+							src="images/image-product-4.jpg"
+							alt="Image 4 of the product"
+						/>
+					</div>
+				</div>
+				<div class="swiper-button-next">
+					<img src="images/icon-next2.svg" alt="" />
+				</div>
+				<div class="swiper-button-prev">
+					<img src="images/icon-prev.svg" alt="" />
+				</div>
+			</div>
+			<div thumbsSlider="" class="swiper mySwiper4">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img src="images/image-product-1-thumbnail.jpg" />
+					</div>
+					<div class="swiper-slide">
+						<img src="images/image-product-2-thumbnail.jpg" />
+					</div>
+					<div class="swiper-slide">
+						<img src="images/image-product-3-thumbnail.jpg" />
+					</div>
+					<div class="swiper-slide">
+						<img src="images/image-product-4-thumbnail.jpg" />
+					</div>
+				</div>
+			</div>
+		</div>
 		<!-- NAVBAR -->
 		<nav class="nav hidden">
 			<ul class="nav__list">
@@ -99,29 +157,33 @@
 							<img
 								src="images/image-product-1.jpg"
 								alt="Image 1 of the product"
+								class="slide-select"
 							/>
 						</div>
 						<div class="swiper-slide">
 							<img
 								src="images/image-product-2.jpg"
 								alt="Image 2 of the product"
+								class="slide-select"
 							/>
 						</div>
 						<div class="swiper-slide">
 							<img
 								src="images/image-product-3.jpg"
 								alt="Image 3 of the product"
+								class="slide-select"
 							/>
 						</div>
 						<div class="swiper-slide">
 							<img
 								src="images/image-product-4.jpg"
 								alt="Image 4 of the product"
+								class="slide-select"
 							/>
 						</div>
 					</div>
 					<div class="swiper-button-next">
-						<img src="images/icon-next.svg" alt="" />
+						<img src="images/icon-next2.svg" alt="" />
 					</div>
 					<div class="swiper-button-prev">
 						<img src="images/icon-prev.svg" alt="" />
@@ -144,6 +206,8 @@
 					</div>
 				</div>
 			</div>
+
+			<!-- TEST -->
 
 			<div class="product-info container">
 				<!-- PRODUCT DESCRIPTION -->

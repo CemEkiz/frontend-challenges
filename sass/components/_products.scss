@@ -82,33 +82,79 @@
 	}
 }
 
+// .swiper-button {
+// 	&-prev,
+// 	&-next {
+// 		width: 0.8rem;
+// 		height: 0.8rem;
+// 		top: 53%;
+// 		display: flex;
+// 		flex-direction: column;
+// 		align-items: center;
+// 		justify-content: center;
+
+// 		@include respond(laptop) {
+// 			display: none;
+// 		}
+// 	}
+
+// 	&-prev {
+// 		margin-left: 2rem;
+// 		@include respond(tab-port) {
+// 			margin-left: 4rem;
+// 		}
+// 	}
+
+// 	&-next {
+// 		margin-right: 2rem;
+
+// 		img {
+// 			color: re;
+// 		}
+// 		@include respond(tab-port) {
+// 			margin-right: 4rem;
+// 		}
+// 	}
+// }
+
+.swiper-button,
 .swiper-button {
-	&-prev,
-	&-next {
-		width: 0.8rem;
-		height: 0.8rem;
-		top: 53%;
+	&-next,
+	&-prev {
+		display: flex;
+		background-color: var(--color-white);
+		height: 1rem;
+		width: 1rem;
+		border-radius: 100px;
+		padding: 2rem;
+
+		img {
+			width: 4rem;
+			z-index: 9999;
+		}
 
 		@include respond(laptop) {
 			display: none;
 		}
 	}
 
-	&-prev {
-		margin-left: 2rem;
+	&-next {
+		img {
+			transform: translateX(20%);
+		}
+
 		@include respond(tab-port) {
-			margin-left: 4rem;
+			transform: translateX(-50%);
 		}
 	}
 
-	&-next {
-		margin-right: 2rem;
-
+	&-prev {
 		img {
-			color: re;
+			transform: translateX(-20%);
 		}
+
 		@include respond(tab-port) {
-			margin-right: 4rem;
+			transform: translateX(50%);
 		}
 	}
 }
@@ -118,34 +164,34 @@
 	content: '';
 }
 
-.swiper-button {
-	&-prev::before,
-	&-next::before {
-		content: '';
-		position: absolute;
-		// opacity: 0.5;
+// .swiper-button {
+// 	&-prev::before,
+// 	&-next::before {
+// 		content: '';
+// 		position: absolute;
+// 		// opacity: 0.5;
 
-		position: absolute;
-		top: 50%;
-		left: 50%;
+// 		position: absolute;
+// 		top: 50%;
+// 		left: 50%;
 
-		z-index: -2;
+// 		z-index: -2;
 
-		border-radius: 500px;
+// 		border-radius: 500px;
 
-		background-color: var(--color-gray-lightest);
+// 		background-color: var(--color-gray-lightest);
 
-		height: 4rem;
-		width: 4rem;
-	}
+// 		height: 4rem;
+// 		width: 4rem;
+// 	}
 
-	&-prev::before {
-		transform: translate(-47%, -50%);
-	}
-	&-next::before {
-		transform: translate(-53%, -50%);
-	}
-}
+// 	&-prev::before {
+// 		transform: translate(-47%, -50%);
+// 	}
+// 	&-next::before {
+// 		transform: translate(-53%, -50%);
+// 	}
+// }
 
 .swiper-thumbs {
 	display: none;
@@ -323,59 +369,61 @@
 	}
 }
 
-// .swiper-pagination-bullet:nth-of-type(1) {
-// 	width: 80px;
-// 	height: 80px;
-// 	border-radius: 1rem;
-// 	background-image: url(/images/image-product-1-thumbnail.jpg);
-// 	background-size: cover;
-// }
+.swiper-modal {
+	position: fixed;
+	z-index: 501;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: none;
 
-// .swiper-pagination-bullet:nth-of-type(2) {
-// 	width: 80px;
-// 	height: 80px;
-// 	border-radius: 1rem;
-// 	background-image: url(/images/image-product-2-thumbnail.jpg);
-// 	background-size: cover;
-// }
+	@include respond(laptop) {
+		display: flex;
+		flex-direction: column;
+		gap: 4rem;
+	}
 
-// .swiper-pagination-bullet:nth-of-type(3) {
-// 	width: 80px;
-// 	height: 80px;
-// 	border-radius: 1rem;
-// 	background-image: url(/images/image-product-3-thumbnail.jpg);
-// 	background-size: cover;
-// }
+	.swiper {
+		.swiper-button,
+		.swiper-button {
+			&-prev,
+			&-next {
+				@include respond(laptop) {
+					display: flex;
+				}
+			}
 
-// .swiper-pagination-bullet:nth-of-type(4) {
-// 	width: 80px;
-// 	height: 80px;
-// 	border-radius: 1rem;
-// 	background-image: url(/images/image-product-4-thumbnail.jpg);
-// 	background-size: cover;
-// }
+			&-prev {
+				transform: translateX(-20%);
+			}
 
-// .swiper-pagination-bullet {
-// 	opacity: 1;
-// 	// display: none;
-// }
+			&-next {
+				transform: translateX(20%);
+			}
+		}
 
-// .swiper-pagination-bullet-active {
-// 	opacity: 0.5;
-// 	border: 2px solid var(--accent-color);
-// }
+		&-thumbs {
+			display: none;
 
-// .swiper-pagination {
-// 	display: none;
+			@include respond(laptop) {
+				display: block;
+			}
+		}
+	}
 
-// 	top: 90%;
-// 	z-index: 99999;
+	.mySwiper4 .swiper-slide {
+		width: 25%;
+		height: 100%;
+		opacity: 0.4;
+	}
 
-// 	@include respond(laptop) {
-// 		display: block;
-// 	}
-// }
+	.mySwiper4 .swiper-slide-thumb-active {
+		opacity: 1;
+	}
+}
 
-// .mySwiper .swiper-slide-thumb-active {
-// 	opacity: 1;
-// }
+.btn-close-modal {
+	margin-right: 2rem;
+	width: 2.4rem;
+	align-self: end;
+}

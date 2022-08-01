@@ -18,7 +18,10 @@ const cartProduct = document.querySelector('.cart__product');
 const cartEmpty = document.querySelector('.cart__empty');
 const cartPrice = document.querySelector('.cart__price');
 const priceContainer = document.querySelector('.product-info__price');
-const deleteProduct = document.querySelector('.cart__product__delete');
+const btnDeleteProduct = document.querySelector('.cart__product__delete');
+const slides = document.querySelectorAll('.slide-select');
+const swiperModal = document.querySelector('.swiper-modal');
+const btnCloseModal = document.querySelector('.btn-close-modal');
 
 ////////////////// Reusable Functions //////////////////
 
@@ -55,6 +58,24 @@ btnClose.addEventListener('click', closeMenu);
 overlay.addEventListener('click', closeMenu);
 navLinks.forEach((link) => link.addEventListener('click', closeMenu));
 
+////////////////// Modal Slider //////////////////
+
+const openSliderModal = (e) => {
+	displayEl(swiperModal);
+	displayEl(overlay);
+};
+
+const closeSliderModal = () => {
+	hideEl(swiperModal);
+	hideEl(overlay);
+};
+
+slides.forEach((slide) => {
+	slide.addEventListener('click', openSliderModal);
+});
+overlay.addEventListener('click', closeSliderModal);
+btnCloseModal.addEventListener('click', closeSliderModal);
+
 ////////////////// Slider //////////////////
 
 // var swiper = new Swiper('.mySwiper', {
@@ -84,6 +105,7 @@ navLinks.forEach((link) => link.addEventListener('click', closeMenu));
 // 	},
 // });
 
+// Thumbs
 var swiper = new Swiper('.mySwiper', {
 	loop: false,
 	spaceBetween: 10,
@@ -91,9 +113,37 @@ var swiper = new Swiper('.mySwiper', {
 	freeMode: false,
 	watchSlidesProgress: false,
 });
+// Slider
 var swiper2 = new Swiper('.mySwiper2', {
 	loop: true,
 	spaceBetween: 0,
+	// preloadImages: true,
+	// lazy: true,
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+	},
+	thumbs: {
+		swiper: swiper,
+		multipleActiveThumbs: false,
+	},
+});
+
+// Thumbs Modal
+var swiper = new Swiper('.mySwiper4', {
+	loop: false,
+	spaceBetween: 10,
+	slidesPerView: 4,
+	freeMode: false,
+	watchSlidesProgress: false,
+});
+
+// Slider Modal
+var swiper2 = new Swiper('.mySwiper3', {
+	loop: true,
+	spaceBetween: 0,
+	// preloadImages: true,
+	// lazy: true,
 	navigation: {
 		nextEl: '.swiper-button-next',
 		prevEl: '.swiper-button-prev',
@@ -180,6 +230,17 @@ const definePrice = (priceBefore, discount) => {
 		updatePrice();
 		updateNotif();
 	});
+
+	btnDeleteProduct.addEventListener('click', function () {
+		if (itemCalc === 0) return;
+		itemCalc = 0;
+		updatePrice();
+		updateNotif();
+	});
 };
 
+console.log(btnDeleteProduct);
+
 definePrice(500, 50);
+
+// Slider Modal

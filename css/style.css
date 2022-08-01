@@ -6,7 +6,7 @@
   --body-color: hsl(219, 9%, 45%);
   --color-gray-light: hsl(220, 14%, 75%);
   --color-gray-lightest: hsl(220, 14%, 94%);
-  --color-black-overlay: rgba(0, 0, 0, 0.5);
+  --color-black-overlay: rgba(0, 0, 0, 0.8);
   --color-white: #ffffff;
 }
 
@@ -105,58 +105,53 @@
   }
 }
 
-.swiper-button-prev, .swiper-button-next {
-  width: 0.8rem;
-  height: 0.8rem;
-  top: 53%;
+.swiper-button-next, .swiper-button-prev,
+.swiper-button-next,
+.swiper-button-prev {
+  display: flex;
+  background-color: var(--color-white);
+  height: 1rem;
+  width: 1rem;
+  border-radius: 100px;
+  padding: 2rem;
+}
+.swiper-button-next img, .swiper-button-prev img,
+.swiper-button-next img,
+.swiper-button-prev img {
+  width: 4rem;
+  z-index: 9999;
 }
 @media only screen and (min-width: 90em) {
-  .swiper-button-prev, .swiper-button-next {
+  .swiper-button-next, .swiper-button-prev,
+.swiper-button-next,
+.swiper-button-prev {
     display: none;
   }
 }
-.swiper-button-prev {
-  margin-left: 2rem;
+.swiper-button-next img,
+.swiper-button-next img {
+  transform: translateX(20%);
 }
 @media only screen and (min-width: 48em) {
-  .swiper-button-prev {
-    margin-left: 4rem;
+  .swiper-button-next,
+.swiper-button-next {
+    transform: translateX(-50%);
   }
 }
-.swiper-button-next {
-  margin-right: 2rem;
-}
-.swiper-button-next img {
-  color: re;
+.swiper-button-prev img,
+.swiper-button-prev img {
+  transform: translateX(-20%);
 }
 @media only screen and (min-width: 48em) {
-  .swiper-button-next {
-    margin-right: 4rem;
+  .swiper-button-prev,
+.swiper-button-prev {
+    transform: translateX(50%);
   }
 }
 
 .swiper-button-next::after,
 .swiper-button-prev::after {
   content: "";
-}
-
-.swiper-button-prev::before, .swiper-button-next::before {
-  content: "";
-  position: absolute;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: -2;
-  border-radius: 500px;
-  background-color: var(--color-gray-lightest);
-  height: 4rem;
-  width: 4rem;
-}
-.swiper-button-prev::before {
-  transform: translate(-47%, -50%);
-}
-.swiper-button-next::before {
-  transform: translate(-53%, -50%);
 }
 
 .swiper-thumbs {
@@ -319,6 +314,59 @@
   .choose-btn {
     margin: 0;
   }
+}
+
+.swiper-modal {
+  position: fixed;
+  z-index: 501;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+@media only screen and (min-width: 90em) {
+  .swiper-modal {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+}
+@media only screen and (min-width: 90em) {
+  .swiper-modal .swiper .swiper-button-prev, .swiper-modal .swiper .swiper-button-next,
+.swiper-modal .swiper .swiper-button-prev,
+.swiper-modal .swiper .swiper-button-next {
+    display: flex;
+  }
+}
+.swiper-modal .swiper .swiper-button-prev,
+.swiper-modal .swiper .swiper-button-prev {
+  transform: translateX(-20%);
+}
+.swiper-modal .swiper .swiper-button-next,
+.swiper-modal .swiper .swiper-button-next {
+  transform: translateX(20%);
+}
+.swiper-modal .swiper-thumbs {
+  display: none;
+}
+@media only screen and (min-width: 90em) {
+  .swiper-modal .swiper-thumbs {
+    display: block;
+  }
+}
+.swiper-modal .mySwiper4 .swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.4;
+}
+.swiper-modal .mySwiper4 .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.btn-close-modal {
+  margin-right: 2rem;
+  width: 2.4rem;
+  align-self: end;
 }
 
 .header {
@@ -571,7 +619,7 @@
 .footer {
   background-color: var(--muted-color);
   width: 100%;
-  height: 5%;
+  height: 24rem;
   color: var(--accent-color);
   text-transform: uppercase;
   font-size: 1.2rem;
@@ -598,13 +646,13 @@
 }
 
 .overlay {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 500;
   background-color: var(--color-black-overlay);
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   overflow: hidden;
 }
 
@@ -637,6 +685,9 @@
 }
 .btn-light {
   box-shadow: var(--accent-color) 0px 15px 50px -12px;
+}
+.btn:hover {
+  background-color: red;
 }
 
 *,
@@ -674,6 +725,7 @@ button {
 
 img {
   width: 100%;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */
