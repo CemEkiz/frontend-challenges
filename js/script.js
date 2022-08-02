@@ -170,6 +170,11 @@ const definePrice = (priceBefore, discount) => {
 		}
 	};
 
+	// Update Input
+	const updateNbItem = () => {
+		itemNb.textContent = itemCalc;
+	};
+
 	// Update Cart Price
 	const updatePrice = () => {
 		cartPrice.innerHTML = '';
@@ -190,8 +195,8 @@ const definePrice = (priceBefore, discount) => {
 	// Increase number of item by 1 and update UI
 	btnPlus.addEventListener('click', function () {
 		itemCalc++;
-		updatePrice();
-		updateNotif();
+		console.log(itemCalc);
+		updateNbItem();
 	});
 
 	// Decrease number of item by 1 and update UI
@@ -199,6 +204,11 @@ const definePrice = (priceBefore, discount) => {
 		// Guard Clause
 		if (itemCalc === 0) return;
 		itemCalc--;
+		console.log(itemCalc);
+		updateNbItem();
+	});
+
+	btnAdd.addEventListener('click', function () {
 		updatePrice();
 		updateNotif();
 	});
