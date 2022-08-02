@@ -60,9 +60,13 @@ navLinks.forEach((link) => link.addEventListener('click', closeMenu));
 
 ////////////////// Modal Slider //////////////////
 
+console.log(window.screen.width > 1440);
+
 const openSliderModal = (e) => {
-	displayEl(swiperModal);
-	displayEl(overlay);
+	if (window.screen.width > 1440) {
+		displayEl(swiperModal);
+		displayEl(overlay);
+	}
 };
 
 const closeSliderModal = () => {
