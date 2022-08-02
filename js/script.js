@@ -60,8 +60,6 @@ navLinks.forEach((link) => link.addEventListener('click', closeMenu));
 
 ////////////////// Modal Slider //////////////////
 
-console.log(window.screen.width > 1440);
-
 const openSliderModal = (e) => {
 	if (window.screen.width > 1440) {
 		displayEl(swiperModal);
@@ -82,34 +80,21 @@ btnCloseModal.addEventListener('click', closeSliderModal);
 
 ////////////////// Slider //////////////////
 
-// var swiper = new Swiper('.mySwiper', {
-// 	slidesPerView: 1,
-// 	loop: true,
+// Slider Product
+var swiper2 = new Swiper('.sliderProduct', {
+	loop: true,
+	spaceBetween: 0,
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+	},
+	thumbs: {
+		swiper: swiper,
+		multipleActiveThumbs: false,
+	},
+});
 
-// 	navigation: {
-// 		nextEl: '.swiper-button-next',
-// 		prevEl: '.swiper-button-prev',
-// 	},
-
-// 	// pagination: {
-// 	// 	el: '.swiper-pagination',
-// 	// 	clickable: true,
-// 	// 	// renderBullet: function (index, className) {
-// 	// 	// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
-// 	// 	// },
-// 	// },
-
-// 	thumbs: {
-// 		swiper: thumbsSwiper,
-// 	},
-
-// 	keyboard: {
-// 		enabled: true,
-// 		onlyInViewport: false,
-// 	},
-// });
-
-// Thumbs
+// Thumbs Product
 var swiper = new Swiper('.thumbsProduct', {
 	loop: false,
 	spaceBetween: 10,
@@ -118,12 +103,10 @@ var swiper = new Swiper('.thumbsProduct', {
 	watchSlidesProgress: false,
 });
 
-// Slider
-var swiper2 = new Swiper('.sliderProduct', {
+// Slider Modal
+var swiper2 = new Swiper('.sliperModal', {
 	loop: true,
 	spaceBetween: 0,
-	// preloadImages: true,
-	// lazy: true,
 	navigation: {
 		nextEl: '.swiper-button-next',
 		prevEl: '.swiper-button-prev',
@@ -143,23 +126,8 @@ var swiper = new Swiper('.thumbsModal', {
 	watchSlidesProgress: false,
 });
 
-// Slider Modal
-var swiper2 = new Swiper('.sliperModal', {
-	loop: true,
-	spaceBetween: 0,
-	// preloadImages: true,
-	// lazy: true,
-	navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev',
-	},
-	thumbs: {
-		swiper: swiper,
-		multipleActiveThumbs: false,
-	},
-});
-
 ////////////////// Show Shopping Cart //////////////////
+
 shopIcon.addEventListener('click', function () {
 	if (cart.classList.contains('hidden')) {
 		displayEl(cart);
@@ -171,24 +139,23 @@ shopIcon.addEventListener('click', function () {
 ////////////////// Price //////////////////
 
 const definePrice = (priceBefore, discount) => {
+	// For calculate the right price
 	const priceAfter = priceBefore * (discount / 100);
 
+	// Update Cart Description
 	priceContainer.innerHTML = '';
-
-	// Display UI ---> Description
 	const html = `
 		<div class="product-info__price__after">$${priceAfter.toFixed(2)}</div>
 		<span class="product-info__price__discount">${discount}%</span>
 		<div class="product-info__price__before">$${priceBefore.toFixed(2)}</div>
 	`;
-
 	priceContainer.insertAdjacentHTML('afterbegin', html);
 
-	// Update Price (UI) ---> Cart
+	// For Cart Price
 	let itemCalc = Number(itemNb.textContent);
 	itemCalc = 0;
 
-	// Update Notif
+	// Update Cart Notif
 	const updateNotif = () => {
 		if (itemCalc > 0) {
 			displayEl(notif);
@@ -203,10 +170,10 @@ const definePrice = (priceBefore, discount) => {
 		}
 	};
 
+	// Update Cart Price
 	const updatePrice = () => {
 		cartPrice.innerHTML = '';
 
-		// Display UI --> Cart
 		const html = `
 		<span>$${priceAfter.toFixed(2)}</span> x <span>${itemCalc}</span>
 		<span class="cart__product__info-final-price">$${(
@@ -236,6 +203,7 @@ const definePrice = (priceBefore, discount) => {
 		updateNotif();
 	});
 
+	// Delete all of the products in the cart
 	btnDeleteProduct.addEventListener('click', function () {
 		if (itemCalc === 0) return;
 		itemCalc = 0;
@@ -244,8 +212,4 @@ const definePrice = (priceBefore, discount) => {
 	});
 };
 
-console.log(btnDeleteProduct);
-
 definePrice(500, 50);
-
-// Slider Modal
