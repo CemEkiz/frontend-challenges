@@ -15,12 +15,12 @@
 			href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
 		/>
 		<link rel="stylesheet" href="css/style.css" />
-		<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-		<!-- <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script> -->
+		<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 		<script defer src="js/script.js"></script>
-		<title>E-commerce product page</title>
+		<title>E-commerce Product Page</title>
 	</head>
 	<body>
+		<!-- SLIPER MODAL -->
 		<div class="swiper-modal hidden">
 			<button class="btn-close-modal">
 				<svg class="icon-gray">
@@ -89,6 +89,7 @@
 				</div>
 			</div>
 		</div>
+
 		<!-- NAVBAR -->
 		<nav class="nav hidden">
 			<ul class="nav__list">
@@ -106,6 +107,7 @@
 				</svg>
 			</button>
 		</nav>
+
 		<!-- HEADER -->
 		<header class="header">
 			<div class="header__left">
@@ -153,10 +155,11 @@
 			</div>
 		</header>
 
+		<!-- OVERLAY -->
 		<div class="overlay hidden"></div>
 
 		<main class="product">
-			<!-- SWIPER -->
+			<!-- SLIDER PRODUCT -->
 			<div class="swiper-flex">
 				<div
 					style="
@@ -195,6 +198,7 @@
 							/>
 						</div>
 					</div>
+					<!-- Navigation -->
 					<div class="swiper-button-next">
 						<div class="next-box">
 							<svg class="icon-gray icon-next">
@@ -210,6 +214,7 @@
 						</div>
 					</div>
 				</div>
+				<!-- Thumbs -->
 				<div thumbsSlider="" class="swiper thumbsProduct">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide">
@@ -228,10 +233,8 @@
 				</div>
 			</div>
 
-			<!-- TEST -->
-
+			<!-- PRODUCT DESCRIPTION -->
 			<div class="product-info container">
-				<!-- PRODUCT DESCRIPTION -->
 				<p class="product-info__tag">Sneaker Company</p>
 				<h1 class="product-info__heading">Fall Limited Edition Sneakers</h1>
 				<p class="product-info__description">
@@ -263,6 +266,8 @@
 				<!-- <div class="btn">Add to cart</div> -->
 			</div>
 		</main>
+
+		<!-- FOOTER -->
 		<footer class="footer">
 			<address>Made with ❤ by Cem</address>
 		</footer>
