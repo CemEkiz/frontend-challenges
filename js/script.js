@@ -80,20 +80,6 @@ btnCloseModal.addEventListener('click', closeSliderModal);
 
 ////////////////// Slider //////////////////
 
-// Slider Product
-var swiper2 = new Swiper('.sliderProduct', {
-	loop: true,
-	spaceBetween: 0,
-	navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev',
-	},
-	thumbs: {
-		swiper: swiper,
-		multipleActiveThumbs: false,
-	},
-});
-
 // Thumbs Product
 var swiper = new Swiper('.thumbsProduct', {
 	loop: false,
@@ -103,8 +89,8 @@ var swiper = new Swiper('.thumbsProduct', {
 	watchSlidesProgress: false,
 });
 
-// Slider Modal
-var swiper2 = new Swiper('.sliperModal', {
+// Slider Product
+var swiper2 = new Swiper('.sliderProduct', {
 	loop: true,
 	spaceBetween: 0,
 	navigation: {
@@ -124,6 +110,20 @@ var swiper = new Swiper('.thumbsModal', {
 	slidesPerView: 4,
 	freeMode: false,
 	watchSlidesProgress: false,
+});
+
+// Slider Modal
+var swiper2 = new Swiper('.sliperModal', {
+	loop: true,
+	spaceBetween: 0,
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+	},
+	thumbs: {
+		swiper: swiper,
+		multipleActiveThumbs: false,
+	},
 });
 
 ////////////////// Show Shopping Cart //////////////////
