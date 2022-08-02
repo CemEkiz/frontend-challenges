@@ -172,19 +172,19 @@
   }
 }
 
-.mySwiper .swiper-slide {
+.thumbsProduct .swiper-slide {
   width: 25%;
   height: 100%;
   opacity: 1;
 }
-.mySwiper .swiper-slide img:hover {
+.thumbsProduct .swiper-slide img:hover {
   transform: scale(0.95);
 }
 
-.mySwiper .swiper-slide-thumb-active {
+.thumbsProduct .swiper-slide-thumb-active {
   opacity: 0.5;
 }
-.mySwiper .swiper-slide-thumb-active img {
+.thumbsProduct .swiper-slide-thumb-active img {
   border: 3px solid var(--accent-color);
 }
 
@@ -373,21 +373,21 @@
     display: block;
   }
 }
-.swiper-modal .mySwiper4 .swiper-slide {
+.swiper-modal .thumbsModal .swiper-slide {
   width: 25%;
   height: 100%;
   opacity: 1;
 }
-.swiper-modal .mySwiper4 .swiper-slide img {
+.swiper-modal .thumbsModal .swiper-slide img {
   transition: all 0.3s;
 }
-.swiper-modal .mySwiper4 .swiper-slide img:hover {
+.swiper-modal .thumbsModal .swiper-slide img:hover {
   transform: scale(0.95);
 }
-.swiper-modal .mySwiper4 .swiper-slide-thumb-active {
+.swiper-modal .thumbsModal .swiper-slide-thumb-active {
   opacity: 0.3;
 }
-.swiper-modal .mySwiper4 .swiper-slide-thumb-active img {
+.swiper-modal .thumbsModal .swiper-slide-thumb-active img {
   border: 3px solid var(--accent-color);
 }
 
