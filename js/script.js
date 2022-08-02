@@ -195,7 +195,6 @@ const definePrice = (priceBefore, discount) => {
 	// Increase number of item by 1 and update UI
 	btnPlus.addEventListener('click', function () {
 		itemCalc++;
-		console.log(itemCalc);
 		updateNbItem();
 	});
 
@@ -204,7 +203,6 @@ const definePrice = (priceBefore, discount) => {
 		// Guard Clause
 		if (itemCalc === 0) return;
 		itemCalc--;
-		console.log(itemCalc);
 		updateNbItem();
 	});
 
