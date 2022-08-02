@@ -20,6 +20,7 @@
 	},
 	"homepage": "https://github.com/CemEkiz/frontend-challenges#readme",
 	"devDependencies": {
+		"@iconfu/svg-inject": "^1.2.3",
 		"sass": "^1.54.0",
 		"swiper": "^8.3.2"
 	}

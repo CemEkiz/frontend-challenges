@@ -6,3 +6,36 @@
 
 @use 'base/helper';
 @use 'base/reset';
+
+.icon-gray {
+	width: 1.6rem;
+	height: 1.6rem;
+	fill: var(--body-color);
+	cursor: pointer;
+	transition: all 0.2s;
+
+	&:hover {
+		fill: var(--accent-color);
+	}
+}
+
+.icon-accent {
+	width: 1.2rem;
+	height: 1.2rem;
+	fill: var(--accent-color);
+	cursor: pointer;
+	transition: all 0.2s;
+
+	&:hover {
+		fill: hsl(25, 100%, 68%);
+	}
+}
+
+.cart-icon {
+	width: 2.4rem;
+	height: 2.4rem;
+}
+
+.icon-minus {
+	transform: translateY(-60%);
+}

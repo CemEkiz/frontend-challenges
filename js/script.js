@@ -18,7 +18,7 @@ const cartProduct = document.querySelector('.cart__product');
 const cartEmpty = document.querySelector('.cart__empty');
 const cartPrice = document.querySelector('.cart__price');
 const priceContainer = document.querySelector('.product-info__price');
-const btnDeleteProduct = document.querySelector('.cart__product__delete');
+const btnDeleteProduct = document.querySelector('.icon-delete');
 const slides = document.querySelectorAll('.slide-select');
 const swiperModal = document.querySelector('.swiper-modal');
 const btnCloseModal = document.querySelector('.btn-close-modal');
@@ -113,6 +113,7 @@ var swiper = new Swiper('.mySwiper', {
 	freeMode: false,
 	watchSlidesProgress: false,
 });
+
 // Slider
 var swiper2 = new Swiper('.mySwiper2', {
 	loop: true,

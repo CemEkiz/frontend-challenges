@@ -14,7 +14,6 @@
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
 		/>
-
 		<link rel="stylesheet" href="css/style.css" />
 		<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 		<!-- <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script> -->
@@ -24,7 +23,9 @@
 	<body>
 		<div class="swiper-modal hidden">
 			<button class="btn-close-modal">
-				<img src="images/icon-close.svg" alt="" />
+				<svg class="icon-gray">
+					<use href="images/symbols.svg#icon-close"></use>
+				</svg>
 			</button>
 			<div
 				style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
@@ -57,10 +58,18 @@
 					</div>
 				</div>
 				<div class="swiper-button-next">
-					<img src="images/icon-next2.svg" alt="" />
+					<div class="next-box">
+						<svg class="icon-gray icon-next">
+							<use href="images/symbols.svg#icon-next"></use>
+						</svg>
+					</div>
 				</div>
 				<div class="swiper-button-prev">
-					<img src="images/icon-prev.svg" alt="" />
+					<div class="prev-box">
+						<svg class="icon-gray icon-prev">
+							<use href="images/symbols.svg#icon-prev"></use>
+						</svg>
+					</div>
 				</div>
 			</div>
 			<div thumbsSlider="" class="swiper mySwiper4">
@@ -92,14 +101,18 @@
 				<li class="nav__list__link hidden"><a href="#">Contact</a></li>
 			</ul>
 			<button class="nav__btn-close">
-				<img src="images/icon-close.svg" alt="" />
+				<svg class="icon-gray icon-close">
+					<use href="images/symbols.svg#icon-close"></use>
+				</svg>
 			</button>
 		</nav>
 		<!-- HEADER -->
 		<header class="header">
 			<div class="header__left">
 				<button class="header__btn-open">
-					<img src="images/icon-menu.svg" alt="" />
+					<svg class="icon-gray icon-open">
+						<use href="images/symbols.svg#icon-menu"></use>
+					</svg>
 				</button>
 				<div class="header__logo">
 					<img src="images/logo.svg" alt="" />
@@ -107,7 +120,9 @@
 			</div>
 			<div class="header__right">
 				<div class="header__cart-icon">
-					<img src="images/icon-cart.svg" alt="" />
+					<svg class="icon-gray cart-icon">
+						<use href="images/symbols.svg#icon-cart"></use>
+					</svg>
 					<div class="header__cart-icon--notif hidden">0</div>
 				</div>
 				<img src="images/image-avatar.png" alt="" class="header__avatar" />
@@ -130,11 +145,9 @@
 							<span class="cart__product__info-final-price">$375.00</span> -->
 						</div>
 					</div>
-					<img
-						src="images/icon-delete.svg"
-						class="cart__product__delete"
-						alt=""
-					/>
+					<svg class="icon-gray icon-delete">
+						<use href="images/symbols.svg#icon-delete"></use>
+					</svg>
 					<button class="btn cart__product__btn">Checkout</button>
 				</div>
 			</div>
@@ -183,10 +196,18 @@
 						</div>
 					</div>
 					<div class="swiper-button-next">
-						<img src="images/icon-next2.svg" alt="" />
+						<div class="next-box">
+							<svg class="icon-gray icon-next">
+								<use href="images/symbols.svg#icon-next"></use>
+							</svg>
+						</div>
 					</div>
 					<div class="swiper-button-prev">
-						<img src="images/icon-prev.svg" alt="" />
+						<div class="prev-box">
+							<svg class="icon-gray icon-prev">
+								<use href="images/symbols.svg#icon-prev"></use>
+							</svg>
+						</div>
 					</div>
 				</div>
 				<div thumbsSlider="" class="swiper mySwiper">
@@ -226,11 +247,15 @@
 				<div class="item-wrapper">
 					<div class="item choose-btn">
 						<button class="item__btn-minus">
-							<img src="images/icon-minus.svg" alt="" />
+							<svg class="icon-accent icon-minus">
+								<use href="images/symbols.svg#icon-minus"></use>
+							</svg>
 						</button>
 						<div class="item__number">0</div>
 						<button class="item__btn-plus">
-							<img src="images/icon-plus.svg" alt="" />
+							<svg class="icon-accent icon-plus">
+								<use href="images/symbols.svg#icon-plus"></use>
+							</svg>
 						</button>
 					</div>
 					<button class="btn btn-light btn-add">Add to cart</button>
@@ -238,7 +263,6 @@
 				<!-- <div class="btn">Add to cart</div> -->
 			</div>
 		</main>
-
 		<footer class="footer">
 			<address>Made with ❤ by Cem</address>
 		</footer>
