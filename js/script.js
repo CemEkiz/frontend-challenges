@@ -106,7 +106,7 @@ btnCloseModal.addEventListener('click', closeSliderModal);
 // });
 
 // Thumbs
-var swiper = new Swiper('.mySwiper', {
+var swiper = new Swiper('.thumbsProduct', {
 	loop: false,
 	spaceBetween: 10,
 	slidesPerView: 4,
@@ -115,7 +115,7 @@ var swiper = new Swiper('.mySwiper', {
 });
 
 // Slider
-var swiper2 = new Swiper('.mySwiper2', {
+var swiper2 = new Swiper('.sliderProduct', {
 	loop: true,
 	spaceBetween: 0,
 	// preloadImages: true,
@@ -131,7 +131,7 @@ var swiper2 = new Swiper('.mySwiper2', {
 });
 
 // Thumbs Modal
-var swiper = new Swiper('.mySwiper4', {
+var swiper = new Swiper('.thumbsModal', {
 	loop: false,
 	spaceBetween: 10,
 	slidesPerView: 4,
@@ -140,7 +140,7 @@ var swiper = new Swiper('.mySwiper4', {
 });
 
 // Slider Modal
-var swiper2 = new Swiper('.mySwiper3', {
+var swiper2 = new Swiper('.sliperModal', {
 	loop: true,
 	spaceBetween: 0,
 	// preloadImages: true,
