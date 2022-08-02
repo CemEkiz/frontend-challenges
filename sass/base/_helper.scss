@@ -3,6 +3,7 @@
 .hidden {
 	visibility: hidden;
 	opacity: 0;
+	// display: none;
 	pointer-events: none;
 	transform: translateX(-100%);
 }
@@ -46,7 +47,6 @@
 	font-weight: var(--weight-bold);
 	font-size: var(--regular-font-size);
 	font-family: 'Kumbh Sans', sans-serif;
-	transition: all 0.2s;
 	cursor: pointer;
 
 	&-light {
@@ -54,10 +54,6 @@
 	}
 
 	&:hover {
-		background-color: hsl(25, 100%, 68%);
+		background-color: red;
 	}
-}
-
-::selection {
-	background-color: hsl(25, 100%, 68%);
 }

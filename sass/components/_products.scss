@@ -76,11 +76,6 @@
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	transition: all 0.2s;
-
-	// &:hover {
-	// 	transform: scale(0.95);
-	// }
 
 	@include respond(tab-port) {
 		border-radius: 1rem;
@@ -133,27 +128,9 @@
 		border-radius: 100px;
 		padding: 2rem;
 
-		.next-box {
-			.icon-next {
-				width: 1.6rem;
-				height: 1.6rem;
-				z-index: 9999;
-
-				transform: translate(10%, 5%);
-			}
-
-			@include respond(tab-port) {
-				transform: translate(-10%, 5%);
-			}
-		}
-
-		.prev-box {
-			.icon-prev {
-				width: 1.6rem;
-				height: 1.6rem;
-
-				transform: translate(-10%, 5%);
-			}
+		img {
+			width: 4rem;
+			z-index: 9999;
 		}
 
 		@include respond(laptop) {
@@ -161,15 +138,23 @@
 		}
 	}
 
-	&-prev {
+	&-next {
+		img {
+			transform: translateX(20%);
+		}
+
 		@include respond(tab-port) {
-			transform: translate(50%, 5%);
+			transform: translateX(-50%);
 		}
 	}
 
-	&-next {
+	&-prev {
+		img {
+			transform: translateX(-20%);
+		}
+
 		@include respond(tab-port) {
-			transform: translate(-50%, 5%);
+			transform: translateX(50%);
 		}
 	}
 }
@@ -216,22 +201,14 @@
 	}
 }
 
-.thumbsProduct .swiper-slide {
+.mySwiper .swiper-slide {
 	width: 25%;
 	height: 100%;
-	opacity: 1;
-
-	img:hover {
-		transform: scale(0.95);
-	}
+	opacity: 0.4;
 }
 
-.thumbsProduct .swiper-slide-thumb-active {
-	opacity: 0.5;
-
-	img {
-		border: 3px solid var(--accent-color);
-	}
+.mySwiper .swiper-slide-thumb-active {
+	opacity: 1;
 }
 
 // Product Input
@@ -344,8 +321,13 @@
 	@include respond(tab-port) {
 	}
 
+	&__btn-plus {
+		cursor: pointer;
+	}
+
 	&__btn-minus {
-		transform: translateY(60%);
+		cursor: pointer;
+		transform: translateY(-16%);
 	}
 
 	&__number {
@@ -413,18 +395,10 @@
 
 			&-prev {
 				transform: translateX(-20%);
-
-				.icon-prev {
-					transform: translate(-15%, 10%);
-				}
 			}
 
 			&-next {
 				transform: translateX(20%);
-
-				.icon-next {
-					transform: translate(20%, 5%);
-				}
 			}
 		}
 
@@ -437,26 +411,14 @@
 		}
 	}
 
-	.thumbsModal .swiper-slide {
+	.mySwiper4 .swiper-slide {
 		width: 25%;
 		height: 100%;
-		opacity: 1;
-
-		img {
-			transition: all 0.3s;
-		}
-
-		img:hover {
-			transform: scale(0.95);
-		}
+		opacity: 0.4;
 	}
 
-	.thumbsModal .swiper-slide-thumb-active {
-		opacity: 0.3;
-
-		img {
-			border: 3px solid var(--accent-color);
-		}
+	.mySwiper4 .swiper-slide-thumb-active {
+		opacity: 1;
 	}
 }
 
@@ -464,12 +426,4 @@
 	margin-right: 2rem;
 	width: 2.4rem;
 	align-self: end;
-
-	transition: all 0.2s;
 }
-
-// .icon-next {
-// 	height: 1.6rem;
-// 	width: 1.6rem;
-// 	transform: translateX(-80%);
-// }
