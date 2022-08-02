@@ -76,6 +76,11 @@
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+	transition: all 0.2s;
+
+	// &:hover {
+	// 	transform: scale(0.95);
+	// }
 
 	@include respond(tab-port) {
 		border-radius: 1rem;
@@ -128,9 +133,27 @@
 		border-radius: 100px;
 		padding: 2rem;
 
-		img {
-			width: 4rem;
-			z-index: 9999;
+		.next-box {
+			.icon-next {
+				width: 1.6rem;
+				height: 1.6rem;
+				z-index: 9999;
+
+				transform: translate(10%, 5%);
+			}
+
+			@include respond(tab-port) {
+				transform: translate(-10%, 5%);
+			}
+		}
+
+		.prev-box {
+			.icon-prev {
+				width: 1.6rem;
+				height: 1.6rem;
+
+				transform: translate(-10%, 5%);
+			}
 		}
 
 		@include respond(laptop) {
@@ -138,23 +161,15 @@
 		}
 	}
 
-	&-next {
-		img {
-			transform: translateX(20%);
-		}
-
+	&-prev {
 		@include respond(tab-port) {
-			transform: translateX(-50%);
+			transform: translate(50%, 5%);
 		}
 	}
 
-	&-prev {
-		img {
-			transform: translateX(-20%);
-		}
-
+	&-next {
 		@include respond(tab-port) {
-			transform: translateX(50%);
+			transform: translate(-50%, 5%);
 		}
 	}
 }
@@ -204,11 +219,19 @@
 .mySwiper .swiper-slide {
 	width: 25%;
 	height: 100%;
-	opacity: 0.4;
+	opacity: 1;
+
+	img:hover {
+		transform: scale(0.95);
+	}
 }
 
 .mySwiper .swiper-slide-thumb-active {
-	opacity: 1;
+	opacity: 0.5;
+
+	img {
+		border: 3px solid var(--accent-color);
+	}
 }
 
 // Product Input
@@ -321,13 +344,8 @@
 	@include respond(tab-port) {
 	}
 
-	&__btn-plus {
-		cursor: pointer;
-	}
-
 	&__btn-minus {
-		cursor: pointer;
-		transform: translateY(-16%);
+		transform: translateY(60%);
 	}
 
 	&__number {
@@ -395,10 +413,18 @@
 
 			&-prev {
 				transform: translateX(-20%);
+
+				.icon-prev {
+					transform: translate(-15%, 10%);
+				}
 			}
 
 			&-next {
 				transform: translateX(20%);
+
+				.icon-next {
+					transform: translate(20%, 5%);
+				}
 			}
 		}
 
@@ -414,11 +440,23 @@
 	.mySwiper4 .swiper-slide {
 		width: 25%;
 		height: 100%;
-		opacity: 0.4;
+		opacity: 1;
+
+		img {
+			transition: all 0.3s;
+		}
+
+		img:hover {
+			transform: scale(0.95);
+		}
 	}
 
 	.mySwiper4 .swiper-slide-thumb-active {
-		opacity: 1;
+		opacity: 0.3;
+
+		img {
+			border: 3px solid var(--accent-color);
+		}
 	}
 }
 
@@ -426,4 +464,12 @@
 	margin-right: 2rem;
 	width: 2.4rem;
 	align-self: end;
+
+	transition: all 0.2s;
 }
+
+// .icon-next {
+// 	height: 1.6rem;
+// 	width: 1.6rem;
+// 	transform: translateX(-80%);
+// }

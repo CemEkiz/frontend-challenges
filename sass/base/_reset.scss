@@ -22,6 +22,11 @@ body {
 
 a {
 	text-decoration: none;
+	transition: all 0.3s;
+
+	&:hover {
+		color: var(--accent-color);
+	}
 }
 
 ul {

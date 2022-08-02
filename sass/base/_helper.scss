@@ -48,12 +48,13 @@
 	font-size: var(--regular-font-size);
 	font-family: 'Kumbh Sans', sans-serif;
 	cursor: pointer;
+	transition: all 0.2s;
 
 	&-light {
 		box-shadow: var(--accent-color) 0px 15px 50px -12px;
 	}
 
 	&:hover {
-		background-color: red;
+		background-color: hsl(25, 100%, 68%);
 	}
 }

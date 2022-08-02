@@ -47,13 +47,6 @@
 			justify-self: start;
 		}
 
-		&__delete {
-			width: 1.6rem;
-			align-self: center;
-			justify-self: end;
-			cursor: pointer;
-		}
-
 		&__btn {
 			grid-column: 1 / -1;
 			cursor: pointer;
@@ -71,4 +64,11 @@
 			}
 		}
 	}
+}
+
+.icon-delete {
+	width: 1.6rem;
+	align-self: center;
+	justify-self: end;
+	cursor: pointer;
 }
