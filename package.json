@@ -8,19 +8,10 @@
 		"devserver": "live-server",
 		"start": "npm-run-all --parallel devserver watch:sass"
 	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/CemEkiz/frontend-challenges.git"
-	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/CemEkiz/frontend-challenges/issues"
-	},
-	"homepage": "https://github.com/CemEkiz/frontend-challenges#readme",
 	"devDependencies": {
-		"@iconfu/svg-inject": "^1.2.3",
 		"sass": "^1.54.0",
 		"swiper": "^8.3.2"
 	}
