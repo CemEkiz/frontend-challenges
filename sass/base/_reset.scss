@@ -18,11 +18,6 @@ body {
 	color: var(--body-color);
 	background-color: var(--color-white);
 	overflow-x: hidden;
-
-	// 768px
-	@include respond(tab-port) {
-		background-color: skyblue;
-	}
 }
 
 a {
