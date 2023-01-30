@@ -1,276 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="32x32"
-			href="./images/favicon-32x32.png"
-		/>
-		<link
-			rel="stylesheet"
-			href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
-		/>
-		<link rel="stylesheet" href="css/style.css" />
-		<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-		<script defer src="js/script.js"></script>
-		<title>E-commerce Product Page</title>
-	</head>
-	<body>
-		<!-- SLIDER MODAL -->
-		<div class="swiper-modal hidden">
-			<button class="btn-close-modal">
-				<svg class="icon-gray">
-					<use href="images/symbols.svg#icon-close"></use>
-				</svg>
-			</button>
-			<div
-				style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
-				class="swiper sliperModal"
-			>
-				<div class="swiper-wrapper">
-					<div class="swiper-slide">
-						<img
-							src="images/image-product-1.jpg"
-							alt="Image 1 of the product"
-						/>
-					</div>
-					<div class="swiper-slide">
-						<img
-							src="images/image-product-2.jpg"
-							alt="Image 2 of the product"
-						/>
-					</div>
-					<div class="swiper-slide">
-						<img
-							src="images/image-product-3.jpg"
-							alt="Image 3 of the product"
-						/>
-					</div>
-					<div class="swiper-slide">
-						<img
-							src="images/image-product-4.jpg"
-							alt="Image 4 of the product"
-						/>
-					</div>
-				</div>
-				<div class="swiper-button-next">
-					<div class="next-box">
-						<svg class="icon-gray icon-next">
-							<use href="images/symbols.svg#icon-next"></use>
-						</svg>
-					</div>
-				</div>
-				<div class="swiper-button-prev">
-					<div class="prev-box">
-						<svg class="icon-gray icon-prev">
-							<use href="images/symbols.svg#icon-prev"></use>
-						</svg>
-					</div>
-				</div>
-			</div>
-			<div thumbsSlider="" class="swiper thumbsModal">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide">
-						<img src="images/image-product-1-thumbnail.jpg" />
-					</div>
-					<div class="swiper-slide">
-						<img src="images/image-product-2-thumbnail.jpg" />
-					</div>
-					<div class="swiper-slide">
-						<img src="images/image-product-3-thumbnail.jpg" />
-					</div>
-					<div class="swiper-slide">
-						<img src="images/image-product-4-thumbnail.jpg" />
-					</div>
-				</div>
-			</div>
-		</div>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png" />
+    <script
+      src="https://kit.fontawesome.com/b40a28f79e.js"
+      crossorigin="anonymous"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script defer src="js/script.js"></script>
+    <title>E-commerce Product Page</title>
+  </head>
+  <body>
+    <!-- SLIDER MODAL -->
+    <div class="swiper-modal hidden">
+      <button class="btn-close-modal">
+        <svg class="icon-gray">
+          <use href="images/symbols.svg#icon-close"></use>
+        </svg>
+      </button>
+      <div
+        style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+        class="swiper sliperModal">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img
+              src="images/image-product-1.jpg"
+              alt="Image 1 of the product" />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="images/image-product-2.jpg"
+              alt="Image 2 of the product" />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="images/image-product-3.jpg"
+              alt="Image 3 of the product" />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="images/image-product-4.jpg"
+              alt="Image 4 of the product" />
+          </div>
+        </div>
+        <div class="swiper-button-next">
+          <div class="next-box">
+            <svg class="icon-gray icon-next">
+              <use href="images/symbols.svg#icon-next"></use>
+            </svg>
+          </div>
+        </div>
+        <div class="swiper-button-prev">
+          <div class="prev-box">
+            <svg class="icon-gray icon-prev">
+              <use href="images/symbols.svg#icon-prev"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div thumbsSlider="" class="swiper thumbsModal">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="images/image-product-1-thumbnail.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/image-product-2-thumbnail.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/image-product-3-thumbnail.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/image-product-4-thumbnail.jpg" />
+          </div>
+        </div>
+      </div>
+    </div>
 
-		<!-- NAVBAR -->
-		<nav class="nav hidden">
-			<ul class="nav__list">
-				<li class="nav__list__link hidden">
-					<a href="#">Collections</a>
-				</li>
-				<li class="nav__list__link hidden"><a href="#">Men</a></li>
-				<li class="nav__list__link hidden"><a href="#">Women</a></li>
-				<li class="nav__list__link hidden"><a href="#">About</a></li>
-				<li class="nav__list__link hidden"><a href="#">Contact</a></li>
-			</ul>
-			<button class="nav__btn-close">
-				<svg class="icon-gray icon-close">
-					<use href="images/symbols.svg#icon-close"></use>
-				</svg>
-			</button>
-		</nav>
+    <!-- NAVBAR -->
+    <nav class="nav hidden">
+      <ul class="nav__list">
+        <li class="nav__list__link hidden">
+          <a href="#">Collections</a>
+        </li>
+        <li class="nav__list__link hidden"><a href="#">Men</a></li>
+        <li class="nav__list__link hidden"><a href="#">Women</a></li>
+        <li class="nav__list__link hidden"><a href="#">About</a></li>
+        <li class="nav__list__link hidden"><a href="#">Contact</a></li>
+      </ul>
+      <button class="nav__btn-close">
+        <svg class="icon-gray icon-close">
+          <use href="images/symbols.svg#icon-close"></use>
+        </svg>
+      </button>
+    </nav>
 
-		<!-- HEADER -->
-		<header class="header">
-			<div class="header__left">
-				<button class="header__btn-open">
-					<svg class="icon-gray icon-open">
-						<use href="images/symbols.svg#icon-menu"></use>
-					</svg>
-				</button>
-				<div class="header__logo">
-					<img src="images/logo.svg" alt="" />
-				</div>
-			</div>
-			<div class="header__right">
-				<div class="header__cart-icon">
-					<svg class="icon-gray cart-icon">
-						<use href="images/symbols.svg#icon-cart"></use>
-					</svg>
-					<div class="header__cart-icon--notif hidden">0</div>
-				</div>
-				<img src="images/image-avatar.png" alt="" class="header__avatar" />
-			</div>
-			<div class="cart hidden">
-				<h3 class="cart__heading">Cart</h3>
-				<div class="cart__empty">
-					<p>Your cart is empty</p>
-				</div>
-				<div class="cart__product hidden-cart">
-					<img
-						src="images/image-product-1-thumbnail.jpg"
-						alt=""
-						class="cart__product__img"
-					/>
-					<div class="cart__product__info">
-						<p>Autumn Limited Edition...</p>
-						<div class="cart__price">
-							<!-- <span>$125.00</span> x <span>3</span>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="header__left">
+        <button class="header__btn-open">
+          <svg class="icon-gray icon-open">
+            <use href="images/symbols.svg#icon-menu"></use>
+          </svg>
+        </button>
+        <div class="header__logo">
+          <img src="images/logo.svg" alt="" />
+        </div>
+      </div>
+      <div class="header__right">
+        <div class="header__cart-icon">
+          <svg class="icon-gray cart-icon">
+            <use href="images/symbols.svg#icon-cart"></use>
+          </svg>
+          <div class="header__cart-icon--notif hidden">0</div>
+        </div>
+        <img src="images/image-avatar.png" alt="" class="header__avatar" />
+      </div>
+      <div class="cart hidden">
+        <h3 class="cart__heading">Cart</h3>
+        <div class="cart__empty">
+          <p>Your cart is empty</p>
+        </div>
+        <div class="cart__product hidden-cart">
+          <img
+            src="images/image-product-1-thumbnail.jpg"
+            alt=""
+            class="cart__product__img" />
+          <div class="cart__product__info">
+            <p>Autumn Limited Edition...</p>
+            <div class="cart__price">
+              <!-- <span>$125.00</span> x <span>3</span>
 							<span class="cart__product__info-final-price">$375.00</span> -->
-						</div>
-					</div>
-					<svg class="icon-gray icon-delete">
-						<use href="images/symbols.svg#icon-delete"></use>
-					</svg>
-					<button class="btn cart__product__btn">Checkout</button>
-				</div>
-			</div>
-		</header>
+            </div>
+          </div>
+          <svg class="icon-gray icon-delete">
+            <use href="images/symbols.svg#icon-delete"></use>
+          </svg>
+          <button class="btn cart__product__btn">Checkout</button>
+        </div>
+      </div>
+    </header>
 
-		<!-- OVERLAY -->
-		<div class="overlay hidden"></div>
+    <!-- OVERLAY -->
+    <div class="overlay hidden"></div>
 
-		<!-- PRODUCT -->
-		<main class="product">
-			<!-- SLIDER PRODUCT -->
-			<div class="swiper-flex">
-				<div
-					style="
-						--swiper-navigation-color: #fff;
-						--swiper-pagination-color: #fff;
-					"
-					class="swiper sliderProduct"
-				>
-					<div class="swiper-wrapper">
-						<div class="swiper-slide">
-							<img
-								src="images/image-product-1.jpg"
-								alt="Image 1 of the product"
-								class="slide-select"
-							/>
-						</div>
-						<div class="swiper-slide">
-							<img
-								src="images/image-product-2.jpg"
-								alt="Image 2 of the product"
-								class="slide-select"
-							/>
-						</div>
-						<div class="swiper-slide">
-							<img
-								src="images/image-product-3.jpg"
-								alt="Image 3 of the product"
-								class="slide-select"
-							/>
-						</div>
-						<div class="swiper-slide">
-							<img
-								src="images/image-product-4.jpg"
-								alt="Image 4 of the product"
-								class="slide-select"
-							/>
-						</div>
-					</div>
-					<!-- Navigation -->
-					<div class="swiper-button-next">
-						<div class="next-box">
-							<svg class="icon-gray icon-next">
-								<use href="images/symbols.svg#icon-next"></use>
-							</svg>
-						</div>
-					</div>
-					<div class="swiper-button-prev">
-						<div class="prev-box">
-							<svg class="icon-gray icon-prev">
-								<use href="images/symbols.svg#icon-prev"></use>
-							</svg>
-						</div>
-					</div>
-				</div>
-				<!-- Thumbs -->
-				<div thumbsSlider="" class="swiper thumbsProduct">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide">
-							<img src="images/image-product-1-thumbnail.jpg" />
-						</div>
-						<div class="swiper-slide">
-							<img src="images/image-product-2-thumbnail.jpg" />
-						</div>
-						<div class="swiper-slide">
-							<img src="images/image-product-3-thumbnail.jpg" />
-						</div>
-						<div class="swiper-slide">
-							<img src="images/image-product-4-thumbnail.jpg" />
-						</div>
-					</div>
-				</div>
-			</div>
+    <!-- PRODUCT -->
+    <main class="product">
+      <!-- SLIDER PRODUCT -->
+      <div class="swiper-flex">
+        <div
+          style="
+            --swiper-navigation-color: #fff;
+            --swiper-pagination-color: #fff;
+          "
+          class="swiper sliderProduct">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                src="images/image-product-1.jpg"
+                alt="Image 1 of the product"
+                class="slide-select" />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="images/image-product-2.jpg"
+                alt="Image 2 of the product"
+                class="slide-select" />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="images/image-product-3.jpg"
+                alt="Image 3 of the product"
+                class="slide-select" />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="images/image-product-4.jpg"
+                alt="Image 4 of the product"
+                class="slide-select" />
+            </div>
+          </div>
+          <!-- Navigation -->
+          <div class="swiper-button-next">
+            <div class="next-box">
+              <svg class="icon-gray icon-next">
+                <use href="images/symbols.svg#icon-next"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="swiper-button-prev">
+            <div class="prev-box">
+              <svg class="icon-gray icon-prev">
+                <use href="images/symbols.svg#icon-prev"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <!-- Thumbs -->
+        <div thumbsSlider="" class="swiper thumbsProduct">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="images/image-product-1-thumbnail.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/image-product-2-thumbnail.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/image-product-3-thumbnail.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/image-product-4-thumbnail.jpg" />
+            </div>
+          </div>
+        </div>
+      </div>
 
-			<!-- PRODUCT DESCRIPTION -->
-			<div class="product-info container">
-				<p class="product-info__tag">Sneaker Co.</p>
-				<h1 class="product-info__heading">Fall Limited Edition Sneakers</h1>
-				<p class="product-info__description">
-					These low profile sneakers are your perfect casual wear companion.
-					Featuring a durable rubber outer sole, they'll withstand everything
-					the weather can offer.
-				</p>
-				<div class="product-info__price">
-					<!-- <div class="product-info__price__after">$125</div>
+      <!-- PRODUCT DESCRIPTION -->
+      <div class="product-info container">
+        <p class="product-info__tag">Sneaker Co.</p>
+        <h1 class="product-info__heading">Fall Limited Edition Sneakers</h1>
+        <p class="product-info__description">
+          These low profile sneakers are your perfect casual wear companion.
+          Featuring a durable rubber outer sole, they'll withstand everything
+          the weather can offer.
+        </p>
+        <div class="product-info__price">
+          <!-- <div class="product-info__price__after">$125</div>
 				<span class="product-info__price__discount">50%</span>
 				<div class="product-info__price__before">$250</div> -->
-				</div>
-				<div class="item-wrapper">
-					<div class="item choose-btn">
-						<button class="item__btn-minus">
-							<svg class="icon-accent icon-minus">
-								<use href="images/symbols.svg#icon-minus"></use>
-							</svg>
-						</button>
-						<div class="item__number">0</div>
-						<button class="item__btn-plus">
-							<svg class="icon-accent icon-plus">
-								<use href="images/symbols.svg#icon-plus"></use>
-							</svg>
-						</button>
-					</div>
-					<button class="btn btn-light btn-add">Add to cart</button>
-				</div>
-				<!-- <div class="btn">Add to cart</div> -->
-			</div>
-		</main>
+        </div>
+        <div class="item-wrapper">
+          <div class="item choose-btn">
+            <button class="item__btn-minus">
+              <svg class="icon-accent icon-minus">
+                <use href="images/symbols.svg#icon-minus"></use>
+              </svg>
+            </button>
+            <div class="item__number">0</div>
+            <button class="item__btn-plus">
+              <svg class="icon-accent icon-plus">
+                <use href="images/symbols.svg#icon-plus"></use>
+              </svg>
+            </button>
+          </div>
+          <button class="btn btn-light btn-add">Add to cart</button>
+        </div>
+        <!-- <div class="btn">Add to cart</div> -->
+      </div>
+    </main>
 
-		<!-- FOOTER -->
-		<footer class="footer">
-			<address>Made with ❤ by Cem</address>
-		</footer>
-	</body>
+    <!-- FOOTER -->
+    <footer class="footer">
+      <address>Made with ❤ by Cem</address>
+    </footer>
+  </body>
 </html>
