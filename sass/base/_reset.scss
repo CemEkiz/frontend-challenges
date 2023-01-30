@@ -3,42 +3,46 @@
 *,
 *::after,
 *::before {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-	font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 body {
-	font-family: 'Kumbh Sans', sans-serif;
-	font-size: var(--regular-font-size);
-	color: var(--body-color);
-	background-color: var(--color-white);
-	overflow-x: hidden;
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: var(--regular-font-size);
+  color: var(--body-color);
+  background-color: var(--color-white);
+  overflow-x: hidden;
 }
 
 a {
-	text-decoration: none;
-	transition: all 0.3s;
+  text-decoration: none;
+  transition: all 0.3s;
 
-	&:hover {
-		color: var(--accent-color);
-	}
+  &:hover {
+    color: var(--accent-color);
+  }
 }
 
 ul {
-	list-style: none;
+  list-style: none;
 }
 
 button {
-	background-color: transparent;
-	border: none;
+  background-color: transparent;
+  border: none;
 }
 
 img {
-	width: 100%;
-	cursor: pointer;
+  width: 100%;
+  cursor: pointer;
+}
+
+.test {
+  font-size: 24px;
 }
