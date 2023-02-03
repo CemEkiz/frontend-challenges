@@ -1,0 +1,105 @@
+@use '../abstracts/' as *;
+
+.hidden {
+	visibility: hidden;
+	opacity: 0;
+	pointer-events: none;
+	transform: translateX(-100%);
+}
+
+.hidden-cart {
+	display: none;
+}
+
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 500;
+
+	background-color: var(--color-black-overlay);
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
+.container {
+	max-width: 50rem;
+	margin: 3.2rem auto;
+	padding: 0 2rem;
+
+	@include respond(tab-port) {
+		max-width: 70rem;
+		margin: 3.2rem auto;
+	}
+
+	@include respond(laptop) {
+		max-width: 144rem;
+	}
+}
+
+.btn {
+	background-color: var(--accent-color);
+	padding: 1.2rem 2.4rem;
+	border-radius: 1rem;
+	color: var(--color-white);
+	font-weight: var(--weight-bold);
+	font-size: var(--regular-font-size);
+	font-family: 'Kumbh Sans', sans-serif;
+	transition: all 0.2s;
+	cursor: pointer;
+
+	&-light {
+		box-shadow: var(--accent-color) 0px 15px 50px -12px;
+	}
+
+	&:hover {
+		background-color: hsl(25, 100%, 68%);
+	}
+}
+
+::selection {
+	background-color: hsl(25, 100%, 68%);
+}
+
+////////////// ICONS //////////////
+
+.icon-gray {
+	width: 1.6rem;
+	height: 1.6rem;
+	fill: var(--body-color);
+	cursor: pointer;
+	transition: all 0.2s;
+
+	&:hover {
+		fill: var(--accent-color);
+	}
+}
+
+.icon-accent {
+	width: 1.2rem;
+	height: 1.2rem;
+	fill: var(--accent-color);
+	cursor: pointer;
+	transition: all 0.2s;
+
+	&:hover {
+		fill: hsl(25, 100%, 68%);
+	}
+}
+
+.cart-icon {
+	width: 2.4rem;
+	height: 2.4rem;
+}
+
+.icon-minus {
+	transform: translateY(-60%);
+}
+
+.icon-delete {
+	width: 1.6rem;
+	align-self: center;
+	justify-self: end;
+	cursor: pointer;
+}

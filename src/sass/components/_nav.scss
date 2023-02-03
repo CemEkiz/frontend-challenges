@@ -1,0 +1,94 @@
+@use '../abstracts/' as *;
+
+.nav {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	background-color: var(--color-white);
+	height: 100vh;
+	width: 30rem;
+	transition: all 0.4s ease-in-out;
+
+	@include respond(tab-port) {
+		width: 40rem;
+	}
+
+	@include respond(laptop) {
+		width: 100vw;
+	}
+
+	&__list {
+		padding: 10rem 3rem;
+
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+		// transform: translateX(100%);
+
+		&__link:nth-child(1) {
+			transition: all 0.4s;
+		}
+		&__link:nth-child(2) {
+			transition: all 0.6s;
+		}
+		&__link:nth-child(3) {
+			transition: all 0.8s;
+		}
+		&__link:nth-child(4) {
+			transition: all 1s;
+		}
+		&__link:nth-child(5) {
+			transition: all 1.2s;
+		}
+
+		@include respond(tab-port) {
+			gap: 4rem;
+		}
+
+		@include respond(laptop) {
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			width: 100vw;
+			gap: 6rem;
+		}
+	}
+
+	a {
+		font-size: var(--h3-font-size);
+		font-weight: var(--weight-bold);
+		color: var(--title-color);
+
+		@include respond(tab-port) {
+			font-size: 2.2rem;
+		}
+
+		@include respond(laptop) {
+			font-size: 3.6rem;
+		}
+	}
+
+	&__btn-close {
+		position: absolute;
+		top: 3rem;
+		left: 3rem;
+		z-index: 9999;
+		padding-bottom: 10rem;
+		cursor: pointer;
+
+		@include respond(laptop) {
+			left: auto;
+			right: 8rem;
+			top: 6rem;
+		}
+	}
+
+	&__btn-close img {
+		width: 1.6rem;
+
+		@include respond(laptop) {
+			width: 2.4rem;
+		}
+	}
+}

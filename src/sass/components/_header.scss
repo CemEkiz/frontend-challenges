@@ -1,0 +1,102 @@
+@use '../abstracts/' as *;
+
+.header {
+	position: relative;
+	height: 6rem;
+	display: flex;
+	justify-content: space-between;
+
+	max-width: 50rem;
+	margin: 0 auto;
+	padding: 0 2rem;
+
+	@include respond(tab-port) {
+		max-width: 70rem;
+		margin: 1.6rem auto;
+	}
+
+	@include respond(laptop) {
+		max-width: 148rem;
+
+		&::after {
+			content: '';
+			position: absolute;
+			z-index: -1;
+			transform: translateY(8rem);
+			width: 144rem;
+			height: 1px;
+			background-color: var(--color-gray-lightest);
+		}
+	}
+
+	&__left,
+	&__right {
+		display: flex;
+		align-items: center;
+		gap: 2.4rem;
+
+		@include respond(laptop) {
+			gap: 4rem;
+		}
+	}
+
+	&__avatar {
+		width: 3.2rem;
+		border-radius: 50px;
+		transition: all 0.1s;
+
+		&:hover {
+			border: 2px solid var(--accent-color);
+		}
+
+		@include respond(laptop) {
+			width: 4.8rem;
+		}
+	}
+
+	&__logo {
+		position: relative;
+		bottom: 0.2rem;
+
+		@include respond(laptop) {
+			width: 16rem;
+		}
+	}
+
+	&__cart-icon {
+		position: relative;
+	}
+
+	&__cart-icon img {
+		width: 2.4rem;
+
+		@include respond(laptop) {
+			width: 2.8rem;
+		}
+	}
+
+	&__cart-icon--notif {
+		position: absolute;
+		top: -0.5rem;
+		right: -1rem;
+		// width: 22px;
+		// height: 16px;
+		padding: 0.1rem 0.8rem;
+		background-color: var(--accent-color);
+		border-radius: 50px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 1rem;
+		color: white;
+	}
+
+	&__btn-open {
+		cursor: pointer;
+
+		@include respond(laptop) {
+			// display: none;
+			width: 2.4rem;
+		}
+	}
+}
