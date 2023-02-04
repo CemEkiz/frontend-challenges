@@ -1,0 +1,9 @@
+.DS_Store
+.prettierignore
+
+node_modules
+package-lock.json
+
+public
+dist
+.parcel-cache
